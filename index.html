@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="images/logo1.jfif" height="60" alt=""> COVID-19</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#explore"> Statistics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#info">News</a>
+                        </li>
+                    </ul>
+                </div><!-- collapse -->
+            </div><!-- container -->
+        </nav>
+
+        <div id="home" class="container">
+            <div class="row pt-lg-5 ">
+                <div class="col-md-12 text-center ">
+                    <br><br><br><br><br><br>
+                    <h1 class="text-white display-2 my-4 ">
+                        STAY HOME , SAVE LIVES</h1>
+                    <h5 class="text-white display-4 my-5">Help stop coronavirus</h5>
+                    <a href="#info" class="btn btn-outline-light btn-lg"><i class="fas fa-arrow-right"></i> Latest News
+                    </a>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </header>
+
+
+    <div id="explore" class="container">
+
+        <h1 class="text-center mt-5">COVID-19 LIVE DATA</h1>
+        <br><br>
+        <table class="table table-hover">
+            <tr>
+                <th>ENTIRE WORLD DATA</th>
+            </tr>
+            <tr>
+                <th>TOTAL CASES</th>
+                <th>TOTAL RECOVERED</th>
+                <th>TOTAL DEATHS</th>
+                <th>PERCENTAGE RECOVERED</th>
+            </tr>
+            <tr id="worldData"></tr>
+        </table>
+        <br><br>
+        <form id="myForm">
+            <select id="selectCountry" onchange="individualCountriesData()">
+                <option>choose a country</option>
+            </select>
+        </form>
+        <br><br>
+        <table class="table table-hover">
+            <tr>
+                <th>COUNTRY BASED DATA</th>
+            </tr>
+            <tr>
+                <th>TOTAL CASES</th>
+                <th>TOTAL RECOVERED</th>
+                <th>TOTAL DEATHS</th>
+                <th>PERCENTAGE RECOVERED</th>
+            </tr>
+            <tr id="individualCountryData"></tr>
+        </table>
+    </div>
+    <br><br><br><br><br>
+
+
+    <section>
+        <div id="info" class="news"></div>
+    </section>
+    <br><br><br><br>
+
+    <section id="info">
+        <div class="container text-center mt-5  text-white">
+            <br>
+
+            <h2 class="features-text">Follow these easy steps to help prevent the spread of COVID-19 :</h2>
+            <hr>
+
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 rana">
+                    <img src="./images/mask.png" class="img-fluid rounded-circle w-25 h-25 mt-2" alt="">
+                    <br>
+                    <h5 class="mt-3">MAKE sure to wear a mask
+                    </h5>
+
+                </div><!-- 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 rana">
+                    <img src="./images/hand.png" class="img-fluid rounded-circle w-25 h-25 mt-2" alt="">
+                    <br>
+                    <h5 class="mt-3">WASH hand often </h5>
+
+
+                </div><!-- 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 rana">
+                    <img src="./images/dis.png" class="img-fluid rounded-circle w-25 h-25 mt-2" alt="">
+                    <br>
+                    <h5 class="mt-3">KEEP a safe distance</h5>
+
+                </div><!-- 3 -->
+
+                <div class="col-lg-3 col-md-4 col-sm-6 rana">
+                    <img src="./images/logo stay.png" class="img-fluid rounded-circle w-25 h-25 mt-2 " alt="">
+                    <br>
+                    <h5 class="mt-3">STAY home as much as you can</h5>
+                </div><!-- 4 -->
+
+            </div><!-- row -->
+        </div>
+        <!--container-->
+
+
+
+    </section><!-- info -->
+    <br><br><br>
+    <footer>
+        <div class="text-center text-light p-3"
+            style=" background-image:linear-gradient( rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699))">
+            © 2022 made by eng/ salma, rehab, rana.
+            <a class="text-dark"></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var worldData = ''
+    var individualCountryData = ''
+    worldInitData()
+    worldCountries()
+    function worldInitData() {
+        var url = "https://api.covid19api.com/summary"
+
+        $.get(url, function (worldData) {
+            percentageOfWorldRecovery = (worldData.Global.TotalRecovered / worldData.Global.TotalConfirmed) * 100
+            worldData = `
+                 <td>${worldData.Global.TotalConfirmed}</td>
+                 <td>${worldData.Global.TotalRecovered}</td>
+                 <td>${worldData.Global.TotalDeaths}</td>
+                 <td>${percentageOfWorldRecovery}</td>`
+            $("#worldData").html(worldData)
+        })
+    }
+    async function worldCountries() {
+        var url = "https://api.covid19api.com/countries"
+        $.get(url, function (individualCountryData) {
+            for (var noofCountries = 0; noofCountries <= individualCountryData.length - 1; noofCountries++) {
+                $("#selectCountry").append("<option value =" + individualCountryData[noofCountries].Country + ">" + individualCountryData[noofCountries].Country + "</option>")
+            }
+        })
+    }
+    function individualCountriesData() {
+        var url = "https://api.covid19api.com/summary"
+
+        $.get(url, function (individualCountryData) {
+            for (var count = 0; count <= individualCountryData.Countries.length; count++) {
+                var selected = $("#selectCountry").find('option:selected').text()
+                if (individualCountryData.Countries[count].Country == selected) {
+                    percentageOfCountryRecovery = (individualCountryData.Countries[count].TotalRecovered / individualCountryData.Countries[count].TotalConfirmed) * 100
+                    individualCountryData = `
+                         <td>${individualCountryData.Countries[count].TotalConfirmed}</td>
+                         <td>${individualCountryData.Countries[count].TotalRecovered}</td>
+                         <td>${individualCountryData.Countries[count].TotalDeaths}</td>
+                         <td>${percentageOfCountryRecovery}</td>`
+                    $("#individualCountryData").html(individualCountryData)
+                    break;
+
+                }
+
+            }
+
+        })
+    }
+
+
+    // news ajax request
+
+    fetch("https://covid-19-news.p.rapidapi.com/v1/covid?q=covid&lang=en&media=True", {
+
+        "method": "GET",
+
+        "headers": {
+
+            "x-rapidapi-key": "2d2dea647fmsh577c57bb54abd69p13249djsn06827c6f1fe8",
+
+            "x-rapidapi-host": "covid-19-news.p.rapidapi.com"
+
+        }
+
+    })
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            var news = document.querySelector('.news');
+
+            for (let i = 0; i < 20; i++) {
+
+                var newsData = `<div class="card">
+
+<img src="${data.articles[i].media}" alt="news_image">
+
+<p class="headline">${data.articles[i].title}</p>
+
+<p class="summary">${data.articles[i].summary}</p>
+
+<a href="${data.articles[i].link}" class="read-more ">
+
+<button>Read More</button>
+
+</a>
+
+</div>`;
+
+                news.innerHTML += newsData;
+
+            }
+
+        })
+
+        .catch(err => {
+
+            console.error(err);
+
+        });
+
+</script>
+
+</html>

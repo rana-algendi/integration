@@ -1,0 +1,147 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: lato;
+    font-weight: 300;
+}
+.navbar{
+    opacity: 0.6;
+    border-bottom: solid 5px rgb(97, 9, 9);
+    background-image:linear-gradient( rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699))
+}
+header{
+    min-height: 100vh;
+    background-image:linear-gradient( rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699))
+    ,url(../images//background1.jfif);
+    background-position: center;
+    background-size: cover;
+
+ font-family: 'Vesper Libre', serif;
+ }
+ #info{
+    background-image:linear-gradient( rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699))
+    
+}
+ .features-text{
+    width: 100%;
+    margin: 0px auto 20px auto;
+    text-align: center;
+    font-family: lato;
+    font: weight bold ;
+    stroke-width: 50%;
+   
+}
+.rana {
+    font-family: lato;
+    text-align: center;
+      }
+.rana i{
+    font-size: 30px;
+    color: darkslateblue;
+    margin-bottom: 10px;
+    
+    font-family: lato;
+    }
+.rana h3{
+        margin-bottom: 10px;
+        font-family: lato;
+    }
+    .news {
+
+        grid-column: 2/4;
+    
+        grid-row: 2/3;
+    
+        background: #fff;
+    
+        box-shadow: 0 10px 25px -10px rgb(97, 9, 9);
+    
+        border-radius: 15px;
+    
+        overflow-y: auto;
+    
+        display: flex;
+    
+        flex-wrap: wrap;
+    
+    }
+    
+    .news .card {
+    
+        width: 35%;
+    
+        background: white;
+    
+        display: flex;
+    
+        flex-direction: column;
+    
+        margin: 50px auto;
+    
+        border-radius: 15px;
+    
+    }
+    
+    .card img {
+    
+        width: 100%;
+    
+        border-radius: 15px 15px 0 0;
+    
+    }
+    
+    .card .headline,.summary {
+    
+        padding: 10px 15px;
+    
+        font-size: 1.5rem;
+    
+    }
+    
+    .summary {
+    
+        font-size: 1rem;
+    
+        color: #424242;
+    
+    }
+    
+    .read-more button{
+    
+        width: 100%;
+    
+        padding: 15px 0;
+    
+        border: none;
+    
+        font-size: 1.1rem;
+    
+        border-radius: 0 0 15px 15px ;
+    
+        background: rgb(109, 11, 11);
+    
+        color: #fff;
+    
+        transition: 0.3s;
+    
+        outline: none;
+    
+    }
+    
+    .read-more button:hover{
+    
+        background: whitesmoke;
+    
+        color: #000;
+    
+        cursor: pointer;
+    
+    }
+    
+ .footer{
+
+background-color: #333;
+ }
+ 
